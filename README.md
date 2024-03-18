@@ -2,7 +2,7 @@
 
 ## How to Run
 
-1. Clone the repository locally
+1. Clone the repository locally: `git clone https://github.com/balance-life-decide/bld.git`
 2. Open a terminal and cd into the repo directory: `cd bld`
 3. Install all dependencies locally: `npm install`
 4. Run the local development server: `npm run dev`
