@@ -7,3 +7,6 @@
 3. Install all dependencies locally: `npm install`
 4. Run the local development server: `npm run dev`
 5. Open the game in a browser using the link printed by the previous command. Usually, the URL is `http://127.0.0.1:5173/`
+
+## Prototype
+<img width="799" alt="Prototype of Game" src="https://github.com/balance-life-decide/bld/assets/96708796/9af653ff-5889-4cc5-a917-42b9a37feeba">
