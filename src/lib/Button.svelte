@@ -1,40 +1,26 @@
 <script>
-  import { createEventDispatcher } from "svelte";
-
-  const dispatch = createEventDispatcher();
-
-  function toggle() {
-    dispatch('toggle');
-  }
-
   export let text;
 
 </script>
 
-<button on:click={toggle}>
+<button on:click>
   {text}
 </button>
 
 <style>
   button {
+    color: white;
+    background-color: #307cf6;
     font-family: inherit;
     font-size: inherit;
     padding: 1em 2em;
-    color: #ff3e00;
-    background-color: rgba(255, 62, 0, 0.1);
     border-radius: 2em;
-    border: 2px solid rgba(255, 62, 0, 0);
-    outline: none;
-    width: 200px;
-    font-variant-numeric: tabular-nums;
+    width: 150px;
     cursor: pointer;
-  }
-
-  button:focus {
-    border: 2px solid #ff3e00;
+    border: none;
   }
 
   button:active {
-    background-color: rgba(255, 62, 0, 0.2);
+    background-color: #4585ed;
   }
 </style>
