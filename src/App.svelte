@@ -1,52 +1,78 @@
 <script>
-  import Button from './lib/Button.svelte'
+  import Button from './lib/Button.svelte';
   import Status from './lib/Status.svelte';
+
+  // list of scenarios
+  let scenarios = [];
+  let pastScenarios = [];
+
+  let currentScenario = {};
 
   // status numbers
   let physical = 10;
   let mental = 10;
-  // let career = 10;
-  // let education = 10;
+  let career = 10;
+  let education = 10;
 
-  // initial scenario art card
-  let src = '/src/assets/soccer1.jpg';
+  let multiplier = 1;
 
-  // initial scenario caption
-  let caption = "Your daughter has a soccer tournament but your boss needs you to stay behind for an important project at work. Will you make it to her game?";
+  // initial scenario info
+  let name = "";
+  let src = "";
+  let caption = "";
+  let dilemna = "";
 
-  // number of decisions
+  // number of decisions taken
   let decisions = 0;
 
-  function accept() {
+  async function loadScenarios() {
+    await fetch("./scenarios.json").then((res) => res.json()).then((data) => {
+      for (const obj of data["scenarios"]) {
+        scenarios.push(obj);
+      }
+    })
 
-    // it can change the art card
-    src = '/src/assets/homework.jpg';
-
-    // it can change the caption
-    caption = "You've finished your homework. You know you could do a better job, but your friends are playing outside. Do you join them?";
-
-    // it can change the statuses
-    mental += 1;
-
-    /* 
-     * TODO: 
-     * these variables will be pulled from the 
-     * event object the game loop function 
-     * returns rather than set manually 
-     */
-
-    decisions++;
+    generateNewScenario();
   }
 
-  function decline() {
-    src = '/src/assets/homework.jpg';
+  function generateNewScenario() {
 
-    caption = "You've finished your homework. You know you could do a better job, but your friends are playing outside. Do you join them?";
+    // TODO: use math with the current statuses to weigh the randomness
+    // for now, it just picks the events in order
+    let random = 0;
 
-    mental -= 2;
+    // pick out new scenario and remove it from scenarios array
+    currentScenario = scenarios.splice(random, 1)[0];
+
+    // set the GUI
+    name = currentScenario["name"];
+    src = currentScenario["img-url"];
+    caption = currentScenario["caption"];
+    dilemna = currentScenario["dilemna"];
+  }
+
+  /**
+   * @param {boolean} decision
+   */
+  function makeDecision(decision) {
+
+    // if you choose no, the values are negated before adding
+    let modifier = (decision ? 1 : -1) * multiplier;
+
+    physical += modifier * currentScenario["physical-modifier"];
+    mental += modifier * currentScenario["mental-modifier"];
+    education += modifier * currentScenario["education-modifier"];
+    career += modifier * currentScenario["career-modifier"];
 
     decisions++;
-  }
+
+    pastScenarios.push(currentScenario);
+
+    generateNewScenario();
+}
+
+loadScenarios();
+
 </script>
 
 <main>
@@ -54,21 +80,24 @@
   <div id="statuses">
     <Status num={physical} src="/src/assets/physical.jpg" />
     <Status num={mental} src="/src/assets/mental.jpg" />
+    <Status num={education} src="/src/assets/physical.jpg" />
+    <Status num={career} src="/src/assets/physical.jpg" />
   </div>
 
-  <h1>Balance, Life, Decide!</h1>
+  <h1>{name}</h1>
 
   <div id="scenario-art">
-    <img {src} alt="Put Scenario Name Here!" />
+    <img {src} alt="{name}" />
   </div>
 
   <div id="scenario-caption">
     <p>{caption}</p>
+    <p><strong>{dilemna}</strong></p>
   </div>
 
   <div id="buttons">
-    <Button text="Yes" on:toggle={accept}/>
-    <Button text="No" on:toggle={decline}/>
+    <Button text="Yes" on:click={() => makeDecision(true)}/>
+    <Button text="No" on:click={() => makeDecision(false)}/>
   </div>
 
   <div id="decisions">
@@ -100,26 +129,13 @@
 
   h1 {
     font-size: 2rem;
-    font-weight: 100;
-    line-height: 1.1;
     margin: 2rem auto;
-    max-width: 14rem;
   }
 
   p {
-    max-width: 50vw;
+    max-width: 60%;
     margin: 1rem auto;
     line-height: 1.35;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      max-width: none;
-    }
-
-    p {
-      max-width: none;
-    }
   }
 
   #statuses {
