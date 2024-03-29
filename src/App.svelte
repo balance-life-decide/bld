@@ -78,10 +78,10 @@ loadScenarios();
 <main>
 
   <div id="statuses">
-    <Status num={physical} src="/src/assets/physical.jpg" />
-    <Status num={mental} src="/src/assets/mental.jpg" />
-    <Status num={education} src="/src/assets/physical.jpg" />
-    <Status num={career} src="/src/assets/physical.jpg" />
+    <Status num={physical} src="/src/assets/Physical Health.jpg" />
+    <Status num={mental} src="/src/assets/Mental Health.jpg" />
+    <Status num={education} src="/src/assets/Education.jpg" />
+    <Status num={career} src="/src/assets/Career.jpg" />
   </div>
 
   <h1>{name}</h1>
