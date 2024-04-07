@@ -9,4 +9,5 @@
 5. Open the game in a browser using the link printed by the previous command. Usually, the URL is `http://127.0.0.1:5173/`
 
 ## Prototype
-<img width="799" alt="Prototype of Game" src="https://github.com/balance-life-decide/bld/assets/96708796/9af653ff-5889-4cc5-a917-42b9a37feeba">
+<img width="650" alt="Prototype of Game" src="https://github.com/balance-life-decide/bld/assets/96708796/6cc517a6-00ef-4649-95e8-aff329f8ff5d">
+
