@@ -1,9 +1,11 @@
 <script>
-  import Button from './lib/Button.svelte';
-  import Status from './lib/Status.svelte';
+  import Button from '$lib/Button.svelte';
+  import Status from '$lib/Status.svelte';
+
+  export let data;
 
   // list of scenarios
-  let scenarios = [];
+  let { scenarios } = data;
   let pastScenarios = [];
 
   let currentScenario = {};
@@ -24,16 +26,6 @@
 
   // number of decisions taken
   let decisions = 0;
-
-  async function loadScenarios() {
-    await fetch("./scenarios.json").then((res) => res.json()).then((data) => {
-      for (const obj of data["scenarios"]) {
-        scenarios.push(obj);
-      }
-    })
-
-    generateNewScenario();
-  }
 
   function generateNewScenario() {
 
@@ -71,17 +63,17 @@
     generateNewScenario();
 }
 
-loadScenarios();
+generateNewScenario();
 
 </script>
 
 <main>
 
   <div id="statuses">
-    <Status num={physical} src="/src/assets/Physical Health.jpg" />
-    <Status num={mental} src="/src/assets/Mental Health.jpg" />
-    <Status num={education} src="/src/assets/Education.jpg" />
-    <Status num={career} src="/src/assets/Career.jpg" />
+    <Status num={physical} src="/physicalhealth.jpg" />
+    <Status num={mental} src="/mentalhealth.jpg" />
+    <Status num={education} src="/education.jpg" />
+    <Status num={career} src="/career.jpg" />
   </div>
 
   <h1>{name}</h1>
