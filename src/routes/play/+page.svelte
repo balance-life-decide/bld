@@ -70,10 +70,10 @@ generateNewScenario();
 <main>
 
   <div id="statuses">
-    <Status num={physical} src="/physicalhealth.jpg" />
-    <Status num={mental} src="/mentalhealth.jpg" />
-    <Status num={education} src="/education.jpg" />
-    <Status num={career} src="/career.jpg" />
+    <Status num={physical} src="/physicalhealth.png" />
+    <Status num={mental} src="/mentalhealth.png" />
+    <Status num={education} src="/education.png" />
+    <Status num={career} src="/career.png" />
   </div>
 
   <h1>{name}</h1>
@@ -133,6 +133,10 @@ generateNewScenario();
   #statuses {
     display: flex;
     flex-direction: row;
+  }
+
+  #scenario-caption {
+    width: 50%;
   }
 
 </style>
