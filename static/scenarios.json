@@ -1,16 +1,48 @@
 {
-  "tutotial": {
+  "tutorial": [
     {
-      "name": "T1",
-      "img-url": "/tutotial.png",
-      "caption": "Tutotial",
-      "dilemna": "Tutotial",
+      "name": "Game Introduction",
+      "img-url": "/t1.png",
+      "caption": "Welcome to Balance-Life-Decide! Your goal is to navigate life's journey, making decisions that lead to the best possible outcomes. Balance various aspects of your character's life to reach the end with fulfillment and success.",
+      "dilemma": "Ready to explore the character's status? Click any button below to continue.",
+      "physical-modifier": 0,
+      "mental-modifier": 0,
+      "education-modifier": 0,
+      "career-modifier": 0
+    },
+    {
+      "name": "Status",
+      "img-url": "/t2.png",
+      "caption": "As you progress through the game, your character's physical health, mental well-being, level of education, and career success, which are displayed at the top of the page, will be influenced by the decisions you make. Keep an eye on these status indicators to ensure a balanced and fulfilling life.",
+      "dilemma": "Ready to explore the game's features? Click any button below to continue.",
+      "physical-modifier": 0,
+      "mental-modifier": 0,
+      "education-modifier": 0,
+      "career-modifier": 0
+    },
+    {
+      "name": "Features",
+      "img-url": "/t3.png",
+      "caption": "As you progress, you'll encounter various scenarios related to your character's life. Each scenario presents a dilemma that you must navigate through decision-making.",
+      "dilemma": "Ready to start your journey? Click any button below to continue.",
       "physical-modifier": 0,
       "mental-modifier": 0,
       "education-modifier": 0,
       "career-modifier": 0
     }
-  },
+  ],
+  "ending": [
+    {
+      "name": "Ending",
+      "img-url": "/ending.png",
+      "caption": "Congratulations, you've reached the end of the game!",
+      "dilemna": "You've completed your character's journey. Would you like to restart the game and explore different paths, or return to the main page?",
+      "physical-modifier": 0,
+      "mental-modifier": 0,
+      "education-modifier": 0,
+      "career-modifier": 0
+    }
+  ],
   "scenarios": [
     {
       "name": "New Job",

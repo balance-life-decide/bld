@@ -5,6 +5,12 @@ education.png - a graduation cap and a opened book to symbolize the education ic
 career.png - a simple person holding a briefcase going up on steps with flat style icon
 
 Scenarios 
+
+t1 - Create an illustration depicting the innocence and wonder of infancy. Show a serene baby exploring their surroundings with curiosity, perhaps with wide eyes and a gentle smile. (https://www.bing.com/images/create)
+t2 - Illustrate the boundless energy and imagination of a child in their K-12 years. Show a child immersed in adventurous play, whether it's exploring the outdoors, inventing games, or embarking on imaginative journeys. (https://www.bing.com/images/create)
+t3 - Produce an illustration depicting the pursuit of dreams and aspirations in young adulthood. Show a young adult setting out on their chosen path, filled with determination and optimism for the future (https://www.bing.com/images/create)
+ending - Illustrate a serene scene at a peaceful graveyard, where a family stands together, reflecting on their journey through life. Emphasize the tranquility of the surroundings, with soft lighting and gentle colors evoking a sense of closure and unity. Capture the solemn yet comforting atmosphere as they pay homage to the past while embracing the future. (https://www.bing.com/images/create)
+
 Starting Golf as a Hobby - Create an image depicting someone embarking on the journey of starting golf as a new hobby. The individual should be depicted on a golf course, standing confidently with a golf club in hand, ready to take a swing. The surroundings should showcase the lush greenery of the golf course, with trees, rolling hills, and maybe even a distant view of other golfers playing. The image should capture the sense of excitement and anticipation as the person begins their journey into the world of golf (https://www.bing.com/images/create)
 Starting a Family - Starting a Family without the letters on the image (https://openart.ai/create)
 Anniversary Celebration for Parents - Planning a Surprise Anniversary Celebration for old Parents (https://openart.ai/create)
