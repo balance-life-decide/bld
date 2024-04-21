@@ -1,4 +1,16 @@
 {
+  "tutotial": {
+    {
+      "name": "T1",
+      "img-url": "/tutotial.png",
+      "caption": "Tutotial",
+      "dilemna": "Tutotial",
+      "physical-modifier": 0,
+      "mental-modifier": 0,
+      "education-modifier": 0,
+      "career-modifier": 0
+    }
+  },
   "scenarios": [
     {
       "name": "New Job",
@@ -119,6 +131,106 @@
       "mental-modifier": 2,
       "education-modifier": -2,
       "career-modifier": -1
+    },
+    {
+      "name": "Starting Golf as a Hobby",
+      "img-url": "/golf.png",
+      "caption": "Lately, you want to play golf as a hobby. However, starting golf as a hobby requires investing in clubs, lessons, and spending time practicing.",
+      "dilemna": "Do you start golf as a new hobby?",
+      "physical-modifier": 1,
+      "mental-modifier": 1,
+      "education-modifier": 0,
+      "career-modifier": -1
+    },
+    {
+      "name": "Starting a Family",
+      "img-url": "/startingfamily.png",
+      "caption": "You and your partner have been discussing starting a family. The idea of parenthood fills you with excitement and anticipation, but it also comes with significant responsibilities and changes to your lifestyle.",
+      "dilemma": "Do you and your partner decide to start a family?",
+      "physical-modifier": -2,
+      "mental-modifier": 2,
+      "education-modifier": 0,
+      "career-modifier": 0
+    },
+    {
+      "name": "Anniversary Celebration for Parents",
+      "img-url": "/celebrateparents.png",
+      "caption": "Planning a surprise anniversary celebration for your parents is both joyful and challenging. It requires careful coordination and secrecy.",
+      "dilemma": "Will you organize this special event for them?",
+      "physical-modifier": -1,
+      "mental-modifier": 2,
+      "education-modifier": 0,
+      "career-modifier": 0
+    },
+    {
+      "name": "Launching a Small Business",
+      "img-url": "/launchingbusiness.png",
+      "caption": "Launching a small business is an exciting venture that brings both opportunities and challenges. Are you ready to take the leap and pursue your entrepreneurial dreams?",
+      "dilemma": "Are you ready to take the leap and pursue your entrepreneurial dreams?",
+      "physical-modifier": -1,
+      "mental-modifier": -1,
+      "education-modifier": 0,
+      "career-modifier": 2
+    },
+    {
+      "name": "Teaching a Cooking Class",
+      "img-url": "/cookingclass.png",
+      "caption": "Teaching a cooking class at a community center is a rewarding opportunity to share your culinary skills with others. It requires dedication and preparation to inspire and educate your students.",
+      "dilemma": "Do you take on the responsibility of teaching a cooking class?",
+      "physical-modifier": -2,
+      "mental-modifier": 1,
+      "education-modifier": 0,
+      "career-modifier": 1
+    },
+    {
+      "name": "Hosting a Game Night with Friends",
+      "img-url": "/gamenight.png",
+      "caption": "Hosting a game night with friends promises fun and laughter, but it also requires planning and preparation. Will you organize this enjoyable gathering for your friends?",
+      "dilemma": "Will you organize this enjoyable gathering for your friends?",
+      "physical-modifier": -1,
+      "mental-modifier": 1,
+      "education-modifier": 0,
+      "career-modifier": 0
+    },
+    {
+      "name": "Volunteering at a Homeless Shelter",
+      "img-url": "/volunteering.png",
+      "caption": "Volunteering at a homeless shelter is a compassionate act that can make a significant difference in the lives of others. It requires dedication and empathy to support those in need.",
+      "dilemma": "Do you dedicate your time to volunteer at the homeless shelter?",
+      "physical-modifier": -2,
+      "mental-modifier": 2,
+      "education-modifier": 0,
+      "career-modifier": 0
+    },
+    {
+      "name": "Losing Your Job to Artificial Intelligence",
+      "img-url": "/ai.png",
+      "caption": "Receiving notice that your job is being automated by artificial intelligence is a shocking blow. It leaves you uncertain about your future career prospects and prompts you to reconsider your career path.",
+      "dilemma": "Do you begin searching for a new job immediately?",
+      "physical-modifier": 0,
+      "mental-modifier": -1,
+      "education-modifier": 0,
+      "career-modifier": -2
+    },
+    {
+      "name": "Escaping from a Cult",
+      "img-url": "/escapecult.png",
+      "caption": "Discovering that the religious group you've been a part of is actually a dangerous cult. Escaping from the compound in the mountains where they reside will be risky, but staying could have severe consequences.",
+      "dilemma": "Do you attempt to escape from the cult compound?",
+      "physical-modifier": 1,
+      "mental-modifier": 2,
+      "education-modifier": 0,
+      "career-modifier": -2
+    },
+    {
+      "name": "Following a Mysterious Stranger",
+      "img-url": "/follow.png",
+      "caption": "Encountering a mysterious stranger who seems to know your name is an intriguing yet unsettling experience. They claim to have important information that could change your life, but following them could lead to unknown dangers.",
+      "dilemma": "Do you trust the mysterious stranger and follow them?",
+      "physical-modifier": -1,
+      "mental-modifier": -1,
+      "education-modifier": 0,
+      "career-modifier": 0
     }
   ]
 }
