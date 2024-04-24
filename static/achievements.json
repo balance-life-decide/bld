@@ -1,0 +1,22 @@
+{
+  "achievements": [
+    {
+      "name": "Hercules",
+      "img-url": "/achievent-hercules.jpg",
+      "description": "Reach a physical health status of 30.",
+      "requires": [
+        {
+          "type": "status",
+          "status": "physical",
+          "operator": "<",
+          "number": 30
+        },
+        {
+          "type": "choice",
+          "scenario-name": "Gym membership",
+          "choice": true
+        }
+      ]
+    }
+  ]
+}
