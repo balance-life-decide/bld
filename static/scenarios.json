@@ -263,6 +263,114 @@
       "mental-modifier": -1,
       "education-modifier": 0,
       "career-modifier": 0
+    },
+
+    {
+      "name": "Self-care",
+      "img-url": "selfcare.jpg",
+      "caption": "As the weekend approached, you were excited for your self-care day with yoga, a bubble bath, and your favorite book. But then, a friend invited you to a last-minute social event. ",
+      "dilemna": "Do you stick to your self-care plans??",
+      "physical-modifier": 0,
+      "mental-modifier": 2,
+      "education-modifier": 0,
+      "career-modifier": 0
+    },
+    {
+      "name": "Family Time",
+      "img-url": "familly.jpg",
+      "caption": "With the weekend finally here, you had been eagerly anticipating spending quality time with your family. You had planned a day of outdoor activities and a cozy movie night together. However, just as you were about to embark on your adventure, you received an unexpected work call with a request for urgent assistance.",
+      "dilemna": "Will you prioritize your family time?",
+      "physical-modifier": 2,
+      "mental-modifier": 1,
+      "education-modifier": 0,
+      "career-modifier": 0
+    },
+    {
+      "name": "Exam",
+      "img-url": "exam.jpeg",
+      "caption": "You have an exam early in the morning, but you aren't fully prepared for it. As the clock ticks closer to midnight, you're faced with a decision: stay up all night to cram, or get some sleep and face the consequences in the morning.",
+      "dilemna": "Will you stay up all night to study?",
+      "physical-modifier":0,
+      "mental-modifier": 2,
+      "education-modifier": 2,
+      "career-modifier": 0
+    },
+
+    {
+      "name": "Volunteering",
+      "img-url": "volunteering.jpg",
+      "caption": "You have committed to volunteering at a local charity event tomorrow morning, but an unexpected opportunity arises to spend the evening with friends. As you weigh your options, you realize that your decision will impact your commitment to the community and the people counting on your support.",
+      "dilemna": "Will you prioritize your commitment to volunteering? ",
+      "physical-modifier": 2,
+      "mental-modifier": 2,
+      "education-modifier": 0,
+      "career-modifier": 0
+    },
+    
+    {
+      "name": "Fulfilling work commitments",
+      "img-url": "work.jpg",
+      "caption": "You've been working hard on a crucial project, but your friend's birthday party is tonight. Balancing professional responsibilities and personal life, you're faced with a tough decision.",
+      "dilemna": "Will you prioritize finishing your project? ",
+      "physical-modifier": 0,
+      "mental-modifier": 2,
+      "education-modifier": 0,
+      "career-modifier": 0
+    },
+
+    {
+      "name": "shopping",
+      "img-url": "shopping.jpg",
+      "caption": "Feeling overwhelmed, you head to the shops to relieve stress. With every purchase, the weight on your shoulders eases for a moment. But as you leave the store, you question if this temporary relief is worth the financial burden.",
+      "dilemna": "Will you prioritize finishing your project? ",
+      "physical-modifier": 2,
+      "mental-modifier": 2,
+      "education-modifier": -2,
+      "career-modifier": -1
+    },
+
+    {
+      "name": "Graduation",
+      "img-url": "graduation.jpg",
+      "caption": " Having just graduated with your bachelor's degree, you stand at a crossroads, pondering your next move. The option to continue your studies looms large, offering paths of further specialization or advanced degrees. Yet, with the weight of uncertainty pressing down, you must decide whether to embark on this new academic journey or explore alternative paths in the workforce.",
+      "dilemna": "Will you choose to continue your studies? ",
+      "physical-modifier": -1,
+      "mental-modifier": 1,
+      "education-modifier": 2,
+      "career-modifier": 2
+    },
+
+    {
+      "name": "Eating healthy",
+      "img-url": "healthy.jpg",
+      "caption": "Your doctor advises you to switch to a healthier diet due to health concerns, but you're hesitant to give up your favorite unhealthy foods.",
+      "dilemna": "Will you make the switch to healthier eating?? ",
+      "physical-modifier": 0,
+      "mental-modifier": 2,
+      "education-modifier": 0,
+      "career-modifier": 0
+    },
+
+    {
+      "name": "Traveling",
+      "img-url": "vacation.jpg",
+      "caption": "You're eager to travel, but commitments keep you grounded. Do you take the leap and embark on an adventure, or stay put for now?.",
+      "dilemna": "Will you travel?? ",
+      "physical-modifier": 1,
+      "mental-modifier": 2,
+      "education-modifier": 0,
+      "career-modifier": 0
+    },
+
+    {
+      "name": "Hacking",
+      "img-url": "/src/assets/homework.jpg",
+      "caption": "Heading out on a hike brings joy and peace to your mind. With each step, stress melts away, replaced by the beauty of nature.",
+      "dilemna": "Will you choose hiking? ",
+      "physical-modifier": 2,
+      "mental-modifier": 2,
+      "education-modifier": -2,
+      "career-modifier": -1
     }
   ]
 }
