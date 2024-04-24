@@ -119,7 +119,7 @@
       "img-url": "/gym.png",
       "caption": "Maybe you've been watching a lot of sports or have more free time than usual, but you've been wanting to get more active. A gym membership will help you're physical and mental health but will take time away from your work.",
       "dilemna": "Pump some iron?",
-      "physical-modifier": 3,
+      "physical-modifier": 30,
       "mental-modifier": 2,
       "education-modifier": -1,
       "career-modifier": -4

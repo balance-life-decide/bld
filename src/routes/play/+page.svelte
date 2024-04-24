@@ -6,15 +6,20 @@
 
   // list of scenarios
   let { scenarios } = data;
+  let { achievements } = data;
+  
   let pastScenarios = [];
+  let pastAchievements = [];
 
   let currentScenario = {};
 
   // status numbers
-  let physical = 10;
-  let mental = 10;
-  let career = 10;
-  let education = 10;
+  let statuses = {
+    physical: 10,
+    mental: 10,
+    career: 10,
+    education: 10,
+  }
 
   let multiplier = 1;
 
@@ -51,29 +56,85 @@
     // if you choose no, the values are negated before adding
     let modifier = (decision ? 1 : -1) * multiplier;
 
-    physical += modifier * currentScenario["physical-modifier"];
-    mental += modifier * currentScenario["mental-modifier"];
-    education += modifier * currentScenario["education-modifier"];
-    career += modifier * currentScenario["career-modifier"];
+    statuses['physical'] += modifier * currentScenario["physical-modifier"];
+    statuses['mental'] += modifier * currentScenario["mental-modifier"];
+    statuses['education'] += modifier * currentScenario["education-modifier"];
+    statuses['career'] += modifier * currentScenario["career-modifier"];
 
     decisions++;
 
+    currentScenario['choice'] = decision;
     pastScenarios.push(currentScenario);
 
+    checkAchievements();
     generateNewScenario();
 }
 
 generateNewScenario();
+
+function checkAchievements() {
+  // for each achievement
+  outer:
+  for (let i in achievements) {
+    let achievement = achievements[i];
+
+    // skip if already achieved
+    if (pastAchievements.filter((oldAchievement) => oldAchievement['name'] === achievement['name']).length === 1)
+      continue;
+
+    // check each requirement for that achievement
+    for (let j in achievement['requires']) {
+      let requirement = achievement['requires'][j];
+      
+      switch (requirement['type']) {
+        case 'status':
+
+          let target = requirement['number'];
+          let current = statuses[requirement['status']];
+
+          switch (requirement['operator']) {
+            case '<':
+              if (!(target < current)) continue outer;
+              break;
+            case '>':
+              if (!(target > current)) continue outer;
+              break;
+            case '=':
+              if (target !== current) continue outer;
+              break;
+          }
+          break;
+
+        case 'choice':
+          for (let k in pastScenarios) {
+
+            let past = pastScenarios[k];
+
+            if (requirement['scenario-name'] === past['name'] && !requirement['choice'] === past['choice'])
+              continue outer;
+          }
+          break;
+      }
+    }
+    // all requirements passed, grant the achievement!
+    grantAchievement(achievement);
+  }
+}
+
+function grantAchievement(achievement) {
+  alert("You got the " + achievement['name'] + " achievement!");
+  pastAchievements.push(achievement);
+}
 
 </script>
 
 <main>
 
   <div id="statuses">
-    <Status num={physical} src="/physicalhealth.png" />
-    <Status num={mental} src="/mentalhealth.png" />
-    <Status num={education} src="/education.png" />
-    <Status num={career} src="/career.png" />
+    <Status num={statuses['physical']} src="/physicalhealth.png" />
+    <Status num={statuses['mental']} src="/mentalhealth.png" />
+    <Status num={statuses['education']} src="/education.png" />
+    <Status num={statuses['career']} src="/career.png" />
   </div>
 
   <h1>{name}</h1>
@@ -88,8 +149,8 @@ generateNewScenario();
   </div>
 
   <div id="buttons">
-    <Button text="Yes" on:click={() => makeDecision(true)}/>
-    <Button text="No" on:click={() => makeDecision(false)}/>
+    <Button text="Yes" on:click={() => makeDecision(true)} />
+    <Button text="No" on:click={() => makeDecision(false)} />
   </div>
 
   <div id="decisions">
